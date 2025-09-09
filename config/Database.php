@@ -1,6 +1,8 @@
 <?php
 
 class Database {
+
+    /*Essa database é uma classe e não uma função, assim os atributos ficam guardados */
     private $db_host = 'localhost';
     private $db_user = 'root';
     private $db_password = '';

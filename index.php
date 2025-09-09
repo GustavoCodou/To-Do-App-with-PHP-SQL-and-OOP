@@ -16,6 +16,17 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $todo->create();
     }
 }
+$tasks= $todo->read()
+
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    if(isset($_POST´['add_task'])){
+        $todo->task = $_POST['task'];
+        $todo->create();
+    }elseif (isset($_POST['complete_task'])){
+        $todo->complete($_POST['id']);
+    }elseif (isset($_POST['UNDO_complete_task'])){
+        $todo->complete($_POST['id']);
+}
 
 ?>
 
